@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RestaurantList">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TabHost
+            android:id="@+id/tabhost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/restaurants_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ListView
+                            android:id="@+id/restaurants"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/details_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Name:" />
+
+                            <EditText
+                                android:id="@+id/restaurant_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:inputType="textPersonName"
+                                android:minHeight="40dp"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Address:" />
+
+                            <EditText
+                                android:id="@+id/restaurant_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:inputType="textPersonName"
+                                android:minHeight="40dp"
+                                tools:ignore="SpeakableTextPresentCheck" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Telephone:" />
+
+                            <EditText
+                                android:id="@+id/restaurant_tel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:inputType="number"
+                                android:maxLength="8"
+                                android:minHeight="40dp"
+                                tools:ignore="SpeakableTextPresentCheck" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="260dp">
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Restaurant Type" />
+
+                            <RadioGroup
+                                android:id="@+id/restaurant_types"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/Chinese"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:text="Chinese" />
+
+                                <RadioButton
+                                    android:id="@+id/Western"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:text="Western" />
+
+                                <RadioButton
+                                    android:id="@+id/Indian"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Indian" />
+
+                                <RadioButton
+                                    android:id="@+id/Indonesian"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Indonesian" />
+
+                                <RadioButton
+                                    android:id="@+id/Korean"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Korean" />
+
+                                <RadioButton
+                                    android:id="@+id/Japanese"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Japanese" />
+
+                                <RadioButton
+                                    android:id="@+id/Thai"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Thai" />
+                            </RadioGroup>
+                        </TableRow>
+
+                        <Button
+                            android:id="@+id/button_save"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Save"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
